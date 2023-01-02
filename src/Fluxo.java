@@ -8,9 +8,16 @@ public class Fluxo {
 	}
 
 	private static void metodo1() {
-		System.out.println("Início do metodo1");
+		try {
+			System.out.println("Início do metodo1");
 		metodo2();
+		Conta conta = null;
+		conta.deposita();
 		System.out.println("Fim do metodo1");
+		} catch (NullPointerException e) {
+			System.out.println("NullPointerException " + e.getMessage());
+		}
+		
 	}
 
 	private static void metodo2() {
@@ -23,7 +30,6 @@ public class Fluxo {
 			}
 		} catch (ArithmeticException e) {
 			System.out.println("ArithmeticException " + e.getMessage());
-			e.printStackTrace();
 		}
 
 	}
