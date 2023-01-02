@@ -14,10 +14,17 @@ public class Fluxo {
 	}
 
 	private static void metodo2() {
-		System.out.println("Início do metodo2");
-		for (int i = 1; i <= 5; i++) {
-			System.out.println(i);
+		try {
+			System.out.println("Início do metodo2");
+			for (int i = 1; i <= 5; i++) {
+				System.out.println(i);
+				int a = i / 0;
+				System.out.println(a);
+			}
+		} catch (ArithmeticException e) {
+			System.out.println("ArithmeticException " + e.getMessage());
+			e.printStackTrace();
 		}
-		System.out.println("Fim do metodo2");
+
 	}
 }
