@@ -6,8 +6,8 @@ public class FluxoComTratamento {
             System.out.println("Início do main");
             metodo1();
             System.out.println("Fim do main");
-        } catch (NullPointerException | ArithmeticException | MinhaException e) {
-            System.out.println("Exception: " + e.getMessage());
+        } catch (NullPointerException | ArithmeticException | MinhaRuntimeException e) {
+            throw new MinhaRuntimeException("Exception: " + e.getMessage());
         }
     }
 
@@ -18,6 +18,10 @@ public class FluxoComTratamento {
     }
 
     private static void metodo2() {
-        metodo2();
+    	System.out.println("Início do metodo2");
+		for (int i = 1; i <= 5; i++) {
+			System.out.println(i);
+			int a = i / 0;
+		}
     }
 }
