@@ -18,7 +18,6 @@ public class FluxoComTratamento {
     }
 
     private static void metodo2() {
-        System.out.println("Início do metodo2");
-        throw new MinhaException("Erro ao calcular.");
+        metodo2();
     }
 }
