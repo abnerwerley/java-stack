@@ -6,7 +6,7 @@ public class FluxoComTratamento {
             System.out.println("Início do main");
             metodo1();
             System.out.println("Fim do main");
-        } catch (NullPointerException | ArithmeticException | MinhaRuntimeException e) {
+        } catch (Exception e) {
             throw new MinhaRuntimeException("Exception: " + e.getMessage());
         }
     }

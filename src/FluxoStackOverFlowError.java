@@ -6,7 +6,7 @@ public class FluxoStackOverFlowError {
 			System.out.println("Início do main");
 			metodo1();
 			System.out.println("Fim do main");
-		} catch (NullPointerException | ArithmeticException | MinhaException e) {
+		} catch (Exception e) {
 			throw new MinhaException("Exception: " + e.getMessage());
 		}
 	}
